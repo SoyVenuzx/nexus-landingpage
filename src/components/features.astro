@@ -1,0 +1,69 @@
+---
+// @ts-ignore
+import { Icon } from 'astro-icon/components';
+
+const features = [
+  {
+    title: 'Estrategia Digital Personalizada',
+    description:
+      'Tu hoja de ruta para el éxito. Maximizamos tu inversión en marketing con planes hechos solo para ti.',
+    icon: 'bx:bxs-briefcase',
+  },
+  {
+    title: 'Publicidad Digital',
+    description:
+      'Creamos y gestionamos campañas de anuncios pagados para generar tráfico y conversiones rápidamente.',
+    icon: 'bx:bxs-window-alt',
+  },
+  {
+    title: 'Diseño Web y Desarrollo',
+    description:
+      'Creamos sitios web atractivos y funcionales que reflejan la esencia de tu marca y mejoran la experiencia del usuario.',
+    icon: 'bx:bx-world',
+  },
+  {
+    title: 'Redes Sociales Dinámicas',
+    description:
+      'Construimos una audiencia fiel y activa para tu marca. Convertimos tus visitas en ventas y fidelizamos a tus clientes.',
+    icon: 'bx:bxs-bot',
+  },
+  {
+    title: 'SEO de Impacto',
+    description:
+      'Mejoramos tu posicionamiento en la web para atraer clientes directamente a tu puerta digital.',
+    icon: 'bx:bxs-file-find',
+  },
+  {
+    title: 'Marketing de Contenido',
+    description:
+      'Creamos contenido relevante y atractivo que resuena con tu audiencia y potencia tu marca.',
+    icon: 'bx:bxs-user',
+  },
+];
+---
+
+<div class='mt-16 md:mt-0'>
+  <h2 class='text-4xl lg:text-5xl font-bold lg:tracking-tight'>
+    Cómo podemos ayudarte?
+  </h2>
+  <p class='text-lg mt-4 text-slate-600'>
+    Potenciamos tu marca en el ecosistema digital con servicios estratégicos que
+    te brindan resultados tangibles
+  </p>
+</div>
+
+<div class='grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16'>
+  {
+    features.map((item) => (
+      <div class='flex gap-4 items-start'>
+        <div class='mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0'>
+          <Icon class='text-white' name={item.icon} />
+        </div>
+        <div>
+          <h3 class='font-semibold text-lg'>{item.title}</h3>{' '}
+          <p class='text-slate-500 mt-2 leading-relaxed'>{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>
