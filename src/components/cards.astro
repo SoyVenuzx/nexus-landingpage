@@ -1,63 +1,83 @@
 ---
-import Container from "@/components/container.astro";
-import Sectionhead from "@/components/sectionhead.astro";
-import PricingCard from "@/components/pricing.astro";
+import Container from '@/components/container.astro';
+import Sectionhead from '@/components/sectionhead.astro';
+import PricingCard from '@/components/pricing.astro';
 
 const pricing = [
   {
-    name: "Personal",
-    price: "Free",
-    popular: false,
-    features: [
-      "Lifetime free",
-      "Up to 3 users",
-      "Unlimited Pages",
-      "Astro Sub domain",
-      "Basic Integrations",
-      "Community Support",
-    ],
-    button: {
-      text: "Get Started",
-      link: "/",
-    },
-  },
-  {
-    name: "Startup",
-    price: {
-      monthly: "$19",
-      annual: "$16",
-      discount: "10%",
-      original: "$24",
-    },
+    name: 'Plan Órbita',
+    price: '$80',
     popular: true,
     features: [
-      "All Free Features",
-      "Up to 20 users",
-      "20 Custom domains",
-      "Unlimited Collaborators",
-      "Advanced Integrations",
-      "Priority Support",
+      'Administración de una Red Social',
+      'Creación de Contenido',
+      '1 Portada al Mes',
+      '8 Artes al Mes ',
+      '8 Historias',
+      '2 Reels al Mes',
+      'Gestión Avanzada en META ADS',
     ],
     button: {
-      text: "Get Started",
-      link: "#",
+      text: 'Empieza Ahora',
+      link: '/contact',
     },
   },
   {
-    name: "Enterprise",
-    price: "Custom",
+    name: 'Plan Nebulosa',
+    price: '$130',
     popular: false,
     features: [
-      "All Pro Features",
-      "Unlimited Custom domains",
-      "99.99% Uptime SLA",
-      "SAML & SSO Integration",
-      "Dedicated Account Manager",
-      "24/7 Phone Support",
+      'Administración de dos redes sociales',
+      'Creación y Publicación de Contenido',
+      '2 Portadas al Mes',
+      '8 Artes al Mes ',
+      '10 Historias',
+      '3 Reels al Mes',
+      '1 Carrusel/Post al Mes',
+      'Gestión Avanzada en META ADS',
     ],
     button: {
-      text: "Contact us",
-      link: "/contact",
+      text: 'Empieza Ahora',
+      link: '/contact',
+    },
+  },
+  {
+    name: 'Plan Propulsión',
+    price: '$160',
+    popular: false,
+    features: [
+      'Administración de 2 redes sociales',
+      'Creación y Publicación de Contenido',
+      '2 Portadas al Mes',
+      '10 Artes al Mes ',
+      '12 Historias',
+      '3 Reels al Mes',
+      '2 Carrusel/Post al Mes',
+      'Gestión Avanzada en META ADS',
+    ],
+    button: {
+      text: 'Empieza Ahora',
+      link: '/contact',
+    },
+  },
+  {
+    name: 'Plan Galaxia',
+    price: '$250',
+    popular: false,
+    features: [
+      'Creación, Edición y Publicación de Contenido',
+      '2 Portadas al Mes',
+      '12 Historias',
+      '8 Reels al Mes',
+      '6 Carrusel/Post al Mes',
+      'Calendario de Contenido',
+      'Reuniones de Revisión y Estrategia',
+      'Reporte de Resultados con Análisis de Crecimiento',
+      'Gestión Avanzada en META ADS',
+    ],
+    button: {
+      text: 'Empieza Ahora',
+      link: '/contact',
     },
   },
 ];
@@ -65,14 +85,13 @@ const pricing = [
 
 <Container>
   <Sectionhead>
-    <Fragment slot="title">Tarifas</Fragment>
-    <Fragment slot="desc">
+    <Fragment slot='title'>Tarifas</Fragment>
+    <Fragment slot='desc'>
       Precios sencillos & previsibles. Sin sorpresas.
     </Fragment>
   </Sectionhead>
 
-  <div
-    class="grid md:grid-cols-3 gap-10 mx-auto max-w-(--breakpoint-lg) mt-12">
+  <div class='grid md:grid-cols-4 gap-10 mx-auto min-w-(--breakpoint-lg) mt-12'>
     {pricing.map((item) => <PricingCard plan={item} />)}
   </div>
 </Container>
