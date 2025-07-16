@@ -16,16 +16,6 @@ interface MenuItemProps extends MenuItem {
 }
 
 const menuitems: MenuItemProps[] = [
-  // {
-  //   title: "Features",
-  //   path: "#",
-  //   children: [
-  //     { title: "Action", path: "/" },
-  //     { title: "Another action", path: "#" },
-  //     { title: "Dropdown Submenu", path: "#" },
-  //     { title: "404 Page", path: "/404" },
-  //   ],
-  // },
   {
     title: 'Inicio',
     path: '/',
@@ -52,7 +42,9 @@ const { pathname } = Astro.url;
 ---
 
 <Container>
-  <header class='flex flex-col lg:flex-row justify-between items-center my-5'>
+  <header
+    id='main-header'
+    class='max-w-7xl fixed end-0 left-0 top-0 right-0 z-50 w-full bg-white transition-transform duration-300 flex flex-col lg:flex-row py-5 mx-auto px-5 justify-between items-center rounded-lg'>
     <Astronav>
       <div class='flex w-full lg:w-auto items-center justify-between'>
         <a href='/' class='text-lg flex justify-between gap-1 items-center'>
@@ -73,13 +65,14 @@ const { pathname } = Astro.url;
             >
           </div>
         </a>
-      </div>
-      <div class='block lg:hidden'>
-        <MenuIcon class='w-4 h-4 text-gray-800' />
+
+        <div class='block lg:hidden'>
+          <MenuIcon class='w-4 h-4 text-gray-800' />
+        </div>
       </div>
     </Astronav>
-    <MenuItems class='hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0'>
-      <ul class='flex flex-col lg:flex-row lg:gap-3'>
+    <MenuItems class='hidden w-full lg:w-auto mt-4 lg:flex lg:mt-0'>
+      <ul class='flex flex-col lg:flex-row lg:gap-3 text-center'>
         {
           menuitems.map((item, index) => {
             const isActive = ['', item.path].find(
@@ -112,22 +105,44 @@ const { pathname } = Astro.url;
           })
         }
       </ul>
-      <!-- <div class="lg:hidden flex items-center mt-3 gap-4"> -->
-      <!--   <Link href="#" style="muted" block size="md">Log in</Link> -->
-      <!--   <Link href="#" size="md" block>Sign up</Link> -->
-      <!-- </div> -->
     </MenuItems>
   </header>
-  <!-- <div> -->
-  <!--   <div class="hidden lg:flex items-center gap-4"> -->
-  <!--     <a href="#">Log in</a> -->
-  <!--     <Link href="#" size="md">Sign up</Link> -->
-  <!--   </div> -->
-  <!-- </div> -->
 </Container>
 
 <style>
   .active {
     font-weight: bolder;
   }
+
+  .navbar-hidden {
+    transform: translateY(-150%);
+  }
 </style>
+
+<script>
+  const header = document.getElementById('main-header');
+
+  console.log(header);
+  if (header) {
+    let lastScrollY = window.scrollY;
+    const headerHeight = header.offsetHeight;
+
+    window.addEventListener('scroll', () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY <= headerHeight) {
+        header.classList.remove('navbar-hidden');
+        lastScrollY = currentScrollY;
+        return;
+      }
+
+      if (currentScrollY > lastScrollY) {
+        header.classList.add('navbar-hidden');
+      } else {
+        header.classList.remove('navbar-hidden');
+      }
+
+      lastScrollY = currentScrollY;
+    });
+  }
+</script>
