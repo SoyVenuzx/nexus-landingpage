@@ -11,21 +11,27 @@ import NexusLogo from '@/assets/nexus.png';
   </h2>
   <div
     class='flex gap-4 md:gap-12 items-center justify-center mt-10 flex-wrap cursor-pointer'>
-    <Icon class='size-8 md:size-11' name='simple-icons:facebook' />
-    <Icon class='size-8 md:size-11' name='simple-icons:instagram' />
+    <a
+      target='_blank'
+      href={'https://www.facebook.com/profile.php?id=61576646686918'}>
+      <Icon class='size-8 md:size-11' name='simple-icons:facebook' />
+    </a>
+    <a target='_blank' href={'https://www.instagram.com/nexusbrandservices.ni'}>
+      <Icon class='size-8 md:size-11' name='simple-icons:instagram' />
+    </a>
     <Icon class='size-8 md:size-11' name='simple-icons:tiktok' />
     <Icon class='size-8 md:size-11' name='simple-icons:whatsapp' />
-    <!-- <Icon class="size-8 md:size-14" name="simple-icons:brave" /> -->
-    <!-- <Icon class="size-8 md:size-12" name="simple-icons:vercel" /> -->
   </div>
-  <a href='/contact'>
-    <Picture
-      src={NexusLogo}
-      alt='Nexus Brand Services Logo'
-      width={200}
-      class={'mx-auto mt-2 mb-[-5.3rem]'}
-      loading='eager'
-      format='avif'
-    />
-  </a>
+  <!-- <Icon class="size-8 md:size-14" name="simple-icons:brave" /> -->
+  <!-- <Icon class="size-8 md:size-12" name="simple-icons:vercel" /> -->
 </div>
+<a href='/contact'>
+  <Picture
+    src={NexusLogo}
+    alt='Nexus Brand Services Logo'
+    width={200}
+    class={'mx-auto mt-2 mb-[-5.3rem]'}
+    loading='eager'
+    format='avif'
+  />
+</a>
