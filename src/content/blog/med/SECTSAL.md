@@ -1,11 +1,12 @@
 ---
 draft: false
-title: "ROMAT"
+title: "SECTSA"
 snippet: "Ornare cum cursus laoreet sagittis nunc fusce posuere per euismod dis vehicula a, semper fames lacus maecenas dictumst pulvinar neque enim non potenti. Torquent hac sociosqu eleifend potenti."
 image: {
     # src: "https://i.ibb.co/995jjGJC/Whats-App-Image-2025-06-15-at-15-54-30.jpg",
-    src: "https://i.ibb.co/YB5Bs9gF/Whats-App-Image-2025-06-15-at-15-54-31-2.jpg",
-    alt: "ROMAT"
+    # src: "https://i.ibb.co/YB5Bs9gF/Whats-App-Image-2025-06-15-at-15-54-31-2.jpg",
+    src: "https://i.ibb.co/HDGGBCBN/Logo-Png-Sectsa.png",
+    alt: "SECTSA"
 }
 # publishDate: "2025-07-25 00:00"
 category: "Logos"

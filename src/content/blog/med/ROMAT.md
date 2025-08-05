@@ -5,6 +5,7 @@ snippet: "Ornare cum cursus laoreet sagittis nunc fusce posuere per euismod dis 
 image: {
     src: "https://i.ibb.co/995jjGJC/Whats-App-Image-2025-06-15-at-15-54-30.jpg",
     # src: "https://i.ibb.co/0pMZgHbJ/Whats-App-Image-2025-06-15-at-17-39-22.jpg",
+    # src: "https://i.ibb.co/HDGGBCBN/Logo-Png-Sectsa.png",
     # src: "https://ibb.co/jvXFFHd1",
     alt: "ROMAT"
 }
