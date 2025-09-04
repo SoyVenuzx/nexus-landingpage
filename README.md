@@ -1,7 +1,18 @@
-# Nexus Brand Services - Astro Landing Page 
+# Nexus Brand Services - Astro Landing Page
+
+## Correcciones
+
+- Responsive de las secciones: Home y Tarifas y cartas de tarifas ✅
+- Secciones: Tarifas para Gestion de Redes, Tarifas de Servicio de Marketing,
+  Tarifas de Imprenta
+- En tarifas añadir un texto que indique para obtener mas informacion de los
+  planes detallados en cada seccion para especificar que pueden obtener mas
+  informacion acerca de las tarifas actuales
+- Definir un alto fijo para las cards y ubicar el boton en la parte inferior
 
 <!-- prettier-ignore -->
 ## Project Structure
+
 Inside of your Astro project, you'll see the following folders and files:
 
 ```
