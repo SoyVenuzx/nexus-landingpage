@@ -1,0 +1,34 @@
+---
+import Container from '@/components/container.astro';
+import SectionHead from '@/components/sectionhead.astro';
+import CardGR from './cards/CardGR.astro';
+import CardSM from './cards/CardSM.astro';
+import CardMD from './cards/CardMD.astro';
+
+const { show = true } = Astro.props;
+---
+
+<Container>
+  <SectionHead>
+    <Fragment slot='title'>Tarifas</Fragment>
+    <Fragment slot='desc'>
+      Precios sencillos & previsibles. Sin sorpresas.
+    </Fragment>
+    <Fragment slot='cont'>
+      Contactános a través de nuestras redes sociales o formas de contacto para
+      obtener más información.
+    </Fragment>
+  </SectionHead>
+
+  <div class='mt-[-1rem]'>
+    <CardGR show={show} />
+    {
+      show && (
+        <>
+          <CardSM />
+          <CardMD />
+        </>
+      )
+    }
+  </div>
+</Container>

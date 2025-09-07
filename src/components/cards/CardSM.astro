@@ -1,0 +1,99 @@
+---
+import Container from '@/components/container.astro';
+import SectionHead from '@/components/sectionhead.astro';
+import PricingCard from '@/components/pricing.astro';
+
+const pricing = [
+  {
+    name: 'Plan Órbita',
+    price: '$80',
+    popular: true,
+    features: [
+      'Administración de una Red Social',
+      'Creación de Contenido',
+      '1 Portada al Mes',
+      '8 Artes al Mes ',
+      '8 Historias',
+      '2 Reels al Mes',
+      'Gestión Avanzada en META ADS',
+    ],
+    button: {
+      text: 'Empieza Ahora',
+      link: '/contact',
+    },
+  },
+  {
+    name: 'Plan Nebulosa',
+    price: '$130',
+    popular: false,
+    features: [
+      'Administración de dos redes sociales',
+      'Creación y Publicación de Contenido',
+      '2 Portadas al Mes',
+      '8 Artes al Mes ',
+      '10 Historias',
+      '3 Reels al Mes',
+      '1 Carrusel/Post al Mes',
+      'Gestión Avanzada en META ADS',
+    ],
+    button: {
+      text: 'Empieza Ahora',
+      link: '/contact',
+    },
+  },
+  {
+    name: 'Plan Propulsión',
+    price: '$160',
+    popular: false,
+    features: [
+      'Administración de 2 redes sociales',
+      'Creación y Publicación de Contenido',
+      '2 Portadas al Mes',
+      '10 Artes al Mes ',
+      '12 Historias',
+      '3 Reels al Mes',
+      '2 Carrusel/Post al Mes',
+      'Gestión Avanzada en META ADS',
+    ],
+    button: {
+      text: 'Empieza Ahora',
+      link: '/contact',
+    },
+  },
+  {
+    name: 'Plan Galaxia',
+    price: '$250',
+    popular: false,
+    features: [
+      'Creación, Edición y Publicación de Contenido',
+      '2 Portadas al Mes',
+      '12 Historias',
+      '8 Reels al Mes',
+      '6 Carrusel/Post al Mes',
+      'Calendario de Contenido',
+      'Reuniones de Revisión y Estrategia',
+      'Reporte de Resultados con Análisis de Crecimiento',
+      'Gestión Avanzada en META ADS',
+    ],
+    button: {
+      text: 'Empieza Ahora',
+      link: '/contact',
+    },
+  },
+];
+---
+
+<Container>
+  <SectionHead>
+    <Fragment slot='title'>Servicios De Marketing</Fragment>
+    <Fragment slot='desc'>
+      Servicios de marketing digital diseñados para darle visibilidad a tu
+      negocio.
+    </Fragment>
+  </SectionHead>
+
+  <div
+    class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mx-auto mt-12'>
+    {pricing.map((item) => <PricingCard plan={item} />)}
+  </div>
+</Container>;

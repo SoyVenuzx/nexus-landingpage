@@ -81,19 +81,21 @@ const pricing = [
     },
   },
 ];
+
+const { show = true } = Astro.props;
 ---
 
 <Container>
-  <Sectionhead>
-    <Fragment slot='title'>Tarifas</Fragment>
-    <Fragment slot='desc'>
-      Precios sencillos & previsibles. Sin sorpresas.
-    </Fragment>
-    <Fragment slot='cont'>
-      Contactános a través de nuestras redes sociales o formas de contacto para
-      obtener más información.
-    </Fragment>
-  </Sectionhead>
+  {
+    show && (
+      <Sectionhead>
+        <Fragment slot='title'>Gestión de Redes</Fragment>
+        <Fragment slot='desc'>
+          Servicios de marketing digital para impulsar tu presencia en línea.
+        </Fragment>
+      </Sectionhead>
+    )
+  }
 
   <div
     class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mx-auto mt-12'>

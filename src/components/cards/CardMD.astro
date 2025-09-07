@@ -1,0 +1,98 @@
+---
+import Container from '@/components/container.astro';
+import SectionHead from '@/components/sectionhead.astro';
+import PricingCard from '@/components/pricing.astro';
+
+const pricing = [
+  {
+    name: 'Paquete Básico',
+    price: 'C$400',
+    popular: true,
+    features: [
+      '10 Items en Lista',
+      'Un diseño estándar (Sin personalizaciones complejas)',
+      'Un solo idioma',
+      '1 única corrección',
+      'Actualización de Items (C$200)',
+      'Actualización completa (C$400)',
+      'Fotografía Personalizada (C$300)',
+      'Integración en redes sociales (Diseño de Publicidad + Copywriting) C$200',
+    ],
+    button: {
+      text: 'Empieza Ahora',
+      link: '/contact',
+    },
+  },
+  {
+    name: 'Paquete Estándar',
+    price: 'C$800',
+    popular: false,
+    features: [
+      '20 Items en Lista',
+      'De 1 a 2 tipos de diseños Personalizados',
+      'Un solo idioma',
+      '2 correcciones',
+      'Actualización de Items (C$300)',
+      'Actualización completa (C$800)',
+      'Fotografía Personalizada (C$300)',
+      'Integración en redes sociales (Diseño de Publicidad + Copywriting) C$200',
+    ],
+    button: {
+      text: 'Empieza Ahora',
+      link: '/contact',
+    },
+  },
+  {
+    name: 'Paquete Premium',
+    price: 'C$1000',
+    popular: false,
+    features: [
+      'Hasta 30 Items en Lista',
+      'De 1 a 3 tipos de diseños Personalizados',
+      'Un solo idioma',
+      '3 correcciones',
+      'Actualización de Items (C$400)',
+      'Actualización completa (C$1000)',
+      'Fotografía Personalizada (C$400)',
+      'Integración en redes sociales (Diseño de Publicidad + Copywriting) C$200',
+    ],
+    button: {
+      text: 'Empieza Ahora',
+      link: '/contact',
+    },
+  },
+  {
+    name: 'Paquete Universal',
+    price: 'C$1500',
+    popular: false,
+    features: [
+      'Máximo 45 Items en Lista',
+      'De 1 a 4 tipos de diseños Personalizados',
+      'Un solo idioma',
+      '4 correcciones',
+      'Actualización de Items (C$400)',
+      'Actualización completa (C$1500)',
+      'Fotografía Personalizada (C$400)',
+      'Integración en redes sociales (Diseño de Publicidad + Copywriting) C$200',
+    ],
+    button: {
+      text: 'Empieza Ahora',
+      link: '/contact',
+    },
+  },
+];
+---
+
+<Container>
+  <SectionHead>
+    <Fragment slot='title'>Menú Digital</Fragment>
+    <Fragment slot='desc'>
+      Diseños atractivos y funcionales para tu negocio.
+    </Fragment>
+  </SectionHead>
+
+  <div
+    class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mx-auto mt-12'>
+    {pricing.map((item) => <PricingCard plan={item} />)}
+  </div>
+</Container>;
