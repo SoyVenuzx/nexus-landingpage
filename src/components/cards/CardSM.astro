@@ -5,17 +5,20 @@ import PricingCard from '@/components/pricing.astro';
 
 const pricing = [
   {
-    name: 'Plan Órbita',
-    price: '$80',
+    name: 'Marketing Digital',
+    price: null,
     popular: true,
     features: [
-      'Administración de una Red Social',
-      'Creación de Contenido',
-      '1 Portada al Mes',
-      '8 Artes al Mes ',
-      '8 Historias',
-      '2 Reels al Mes',
-      'Gestión Avanzada en META ADS',
+      'Desarrollo de estrategias de marketing',
+      'Diagnóstico completo de marca digital',
+      'Re configuración, Análisis, Creación y administración de redes sociales',
+      'Creación de calendarios de contenidos',
+      'Ubicación en Google Maps',
+      'Videos, Reel, Grids, Edición de video',
+      'Copywriting, Redacción para publicaciones',
+      'Creación y optimización de campañas ads',
+      'Personalización de mensajes y experiencia por IA',
+      'Chatbots con IA para atención al cliente',
     ],
     button: {
       text: 'Empieza Ahora',
@@ -23,47 +26,9 @@ const pricing = [
     },
   },
   {
-    name: 'Plan Nebulosa',
-    price: '$130',
-    popular: false,
-    features: [
-      'Administración de dos redes sociales',
-      'Creación y Publicación de Contenido',
-      '2 Portadas al Mes',
-      '8 Artes al Mes ',
-      '10 Historias',
-      '3 Reels al Mes',
-      '1 Carrusel/Post al Mes',
-      'Gestión Avanzada en META ADS',
-    ],
-    button: {
-      text: 'Empieza Ahora',
-      link: '/contact',
-    },
-  },
-  {
-    name: 'Plan Propulsión',
-    price: '$160',
-    popular: false,
-    features: [
-      'Administración de 2 redes sociales',
-      'Creación y Publicación de Contenido',
-      '2 Portadas al Mes',
-      '10 Artes al Mes ',
-      '12 Historias',
-      '3 Reels al Mes',
-      '2 Carrusel/Post al Mes',
-      'Gestión Avanzada en META ADS',
-    ],
-    button: {
-      text: 'Empieza Ahora',
-      link: '/contact',
-    },
-  },
-  {
-    name: 'Plan Galaxia',
-    price: '$250',
-    popular: false,
+    name: 'Diseño Gráfico',
+    price: null,
+    popular: true,
     features: [
       'Creación, Edición y Publicación de Contenido',
       '2 Portadas al Mes',
@@ -92,8 +57,7 @@ const pricing = [
     </Fragment>
   </SectionHead>
 
-  <div
-    class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mx-auto mt-12'>
+  <div class='grid grid-cols-1 md:grid-cols-2 gap-10 mx-auto mt-12'>
     {pricing.map((item) => <PricingCard plan={item} />)}
   </div>
 </Container>;
