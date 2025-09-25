@@ -1,8 +1,9 @@
 ---
 import { Tick } from '@/components/ui/icons';
 import Link from '@/components/ui/link.astro';
+import type { CardType } from './cards/cards.types';
 
-const { plan } = Astro.props;
+const { plan } = Astro.props as { plan: CardType };
 ---
 
 <div class='flex flex-wrap gap-6 justify-center'>
@@ -30,7 +31,7 @@ const { plan } = Astro.props;
     </div>
     <ul class='grid mt-8 text-left gap-y-4 flex-1'>
       {
-        plan.features.map((item) => (
+        plan.features.map((item: string) => (
           <li class='flex items-start gap-3 text-gray-800'>
             <Tick class='min-w-6 h-6' />
             <span>{item}</span>

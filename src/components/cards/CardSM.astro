@@ -45,6 +45,23 @@ const pricing = [
       link: '/contact',
     },
   },
+  {
+    name: 'Imprenta',
+    price: null,
+    popular: true,
+    features: [
+      'Sublimación y Serigrafía Textil',
+      'Rotulación en Lonas',
+      'Banners y Displays Publicitarios',
+      'Stickers y Etiquetas Personalizadas',
+      'Tarjetas de Presentación',
+      'Brochures y Folletos Informativos',
+    ],
+    button: {
+      text: 'Empieza Ahora',
+      link: '/contact',
+    },
+  },
 ];
 ---
 
@@ -60,4 +77,6 @@ const pricing = [
   <div class='grid grid-cols-1 md:grid-cols-2 gap-10 mx-auto mt-12'>
     {pricing.map((item) => <PricingCard plan={item} />)}
   </div>
-</Container>;
+</Container>
+
+;
