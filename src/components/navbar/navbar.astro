@@ -28,10 +28,10 @@ const menuitems: MenuItemProps[] = [
     title: 'Nosotros',
     path: '/about',
   },
-  {
-    title: 'Portafolio',
-    path: '/blog',
-  },
+  // {
+  //   title: 'Portafolio',
+  //   path: '/blog',
+  // },
   {
     title: 'Contacto',
     path: '/contact',
@@ -76,7 +76,7 @@ const { pathname } = Astro.url;
         {
           menuitems.map((item, index) => {
             const isActive = ['', item.path].find(
-              (e) => e === pathname.slice(0)
+              (e) => e === pathname.slice(0),
             )
               ? 'active'
               : '';
