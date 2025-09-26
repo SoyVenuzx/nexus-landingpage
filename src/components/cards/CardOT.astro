@@ -1,0 +1,57 @@
+---
+import Container from '@/components/container.astro';
+import SectionHead from '@/components/sectionhead.astro';
+import PricingCard from '@/components/pricing.astro';
+
+const pricing = [
+  {
+    name: 'Imprenta',
+    price: null,
+    popular: false,
+    features: [
+      'Sublimación y Serigrafía Textil',
+      'Rotulación en Lonas',
+      'Banners y Displays Publicitarios',
+      'Tarjetas de Presentación',
+      'Brochures y Folletos Informativos',
+    ],
+    button: {
+      text: 'Empieza Ahora',
+      link: '/contact',
+    },
+  },
+  {
+    name: 'Contables y Fiscales',
+    price: null,
+    popular: false,
+    features: [
+      'Revisoría Fiscal',
+      'Auditorías',
+      'Asesorías en NIF',
+      'Asesorías Financieras',
+      'Asesorías Tributarias',
+      'Control Interno',
+    ],
+    button: {
+      text: 'Empieza Ahora',
+      link: '/contact',
+    },
+  },
+];
+---
+
+<Container>
+  <SectionHead>
+    <Fragment slot='title'>Otros Servicios</Fragment>
+    <Fragment slot='desc'>
+      Servicios adicionales para complementar tu estrategia de marketing y
+      diseño gráfico.
+    </Fragment>
+  </SectionHead>
+
+  <div class='grid grid-cols-1 md:grid-cols-2 gap-10 md:mx-40 sm:mx-auto mt-12'>
+    {pricing.map((item) => <PricingCard plan={item} />)}
+  </div>
+</Container>
+
+;

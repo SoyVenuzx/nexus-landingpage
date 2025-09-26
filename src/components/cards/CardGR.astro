@@ -9,13 +9,14 @@ const pricing = [
     price: '$80',
     popular: true,
     features: [
-      'Administración de una Red Social',
-      'Creación de Contenido',
+      'Administración de redes FB/IG',
+      'Creación de Contenido y edición de texto',
       '1 Portada al Mes',
       '8 Artes al Mes ',
       '8 Historias',
       '2 Reels al Mes',
-      'Gestión Avanzada en META ADS',
+      'Adaptaciones de Logo',
+      'Gestión Avanzada en META ADS (1 campaña mensual  + segmentación avanzada y estrategica, presupuesto asumido por el cliente)',
     ],
     button: {
       text: 'Empieza Ahora',
@@ -25,15 +26,19 @@ const pricing = [
   {
     name: 'Plan Nebulosa',
     price: '$130',
-    popular: false,
+    popular: true,
     features: [
-      'Administración de dos redes sociales',
-      'Creación y Publicación de Contenido',
-      '2 Portadas al Mes',
-      '8 Artes al Mes ',
-      '10 Historias',
-      '3 Reels al Mes',
-      '1 Carrusel/Post al Mes',
+      'Administración de redes FB/IG',
+      'Creación, Publicación de contenido y edición de texto',
+      '2 Portada al mes',
+      'Adaptaciones del Logo',
+      '8 Artes para redes sociales al mes',
+      '10 historias',
+      '3 reels al mes',
+      '1 carrusel al mes  - post',
+      '2 días de publicidad pagada',
+      '1 visita presencial al mes',
+      'Gestión de pauta avanzada en META ADS',
       'Gestión Avanzada en META ADS',
     ],
     button: {
@@ -44,16 +49,23 @@ const pricing = [
   {
     name: 'Plan Propulsión',
     price: '$160',
-    popular: false,
+    popular: true,
     features: [
-      'Administración de 2 redes sociales',
-      'Creación y Publicación de Contenido',
-      '2 Portadas al Mes',
-      '10 Artes al Mes ',
-      '12 Historias',
-      '3 Reels al Mes',
-      '2 Carrusel/Post al Mes',
-      'Gestión Avanzada en META ADS',
+      'Administración de redes FB/IG',
+      'Creación, Publicación de contenido y edición de texto',
+      'Optimización de redes sociales',
+      'Línea Gráfica',
+      '2 Portada al mes',
+      'Adaptaciones del Logo',
+      '10 Artes para redes sociales al mes',
+      '13 historias del contenido trabajado',
+      '3 reels al mes',
+      'Sesión Fotográfica de marca ó 1 reels ó vídeoClips',
+      '2 carruseles al mes - post',
+      '1 Visita Presencial Mensual para recolección de contenido',
+      '3 días de Publicidad Pagada',
+      'Desarrollo de calendario e ideas de contenido',
+      'Asesoría y Gestión de Pauta avanzada en META ADS',
     ],
     button: {
       text: 'Empieza Ahora',
@@ -63,17 +75,23 @@ const pricing = [
   {
     name: 'Plan Galaxia',
     price: '$250',
-    popular: false,
+    popular: true,
     features: [
-      'Creación, Edición y Publicación de Contenido',
-      '2 Portadas al Mes',
-      '12 Historias',
-      '8 Reels al Mes',
-      '6 Carrusel/Post al Mes',
-      'Calendario de Contenido',
-      'Reuniones de Revisión y Estrategia',
-      'Reporte de Resultados con Análisis de Crecimiento',
-      'Gestión Avanzada en META ADS',
+      'Administración de 3 redes',
+      'Creación, Publicación y edición de contenido, copys',
+      'Optimización de redes sociales',
+      'Línea Gráfica',
+      '2 Portada al mes',
+      'Adaptaciones del Logo',
+      '12 historias al mes (6 producidas y 6 orgánicas)',
+      '8 reels al mes (2 por semana)',
+      '6 carruseles al mes (2 por semana)',
+      'Calendario de contenido',
+      '2 visita presencial mensual para recolección de contenido',
+      '2 reuniones de revisión y estrategia',
+      '10 días de Publicidad pagada',
+      'Reporte completo de redes con análisis de crecimiento',
+      'Gestión de pauta avanzada en META ADS',
     ],
     button: {
       text: 'Empieza Ahora',
@@ -97,8 +115,7 @@ const { show = true } = Astro.props;
     )
   }
 
-  <div
-    class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mx-auto mt-12'>
+  <div class='grid grid-cols-1 md:grid-cols-2 gap-10 mx-auto mt-12'>
     {pricing.map((item) => <PricingCard plan={item} />)}
   </div>
 </Container>

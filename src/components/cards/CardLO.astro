@@ -1,0 +1,64 @@
+---
+import Container from '@/components/container.astro';
+import Sectionhead from '@/components/sectionhead.astro';
+import PricingCard from '@/components/pricing.astro';
+
+const pricing = [
+  {
+    name: 'Paquete Básico',
+    price: '$35',
+    popular: true,
+    features: [
+      '2 Propuestas',
+      '2 Correcciones',
+      'Archivos pdf, svg, png, jpg',
+      'Código de colores',
+      'Tipografías',
+      'Presentación Comercial',
+      'Stickers para Whatsapp',
+    ],
+    button: {
+      text: 'Empieza Ahora',
+      link: '/contact',
+    },
+  },
+  {
+    name: 'Paquete Estándar',
+    price: '$60',
+    popular: true,
+    features: [
+      '3 Propuestas',
+      '3 Correcciones',
+      'Archivos png, jpg',
+      'Código de colores',
+      'Tipografías',
+      'Presentación Comercial',
+      'Stickers para Whatsapp',
+    ],
+    button: {
+      text: 'Empieza Ahora',
+      link: '/contact',
+    },
+  },
+];
+
+const { show = true } = Astro.props;
+---
+
+<Container>
+  {
+    show && (
+      <Sectionhead>
+        <Fragment slot='title'>Creación de Logos</Fragment>
+        <Fragment slot='desc'>
+          Manual de marca básico con reglas de uso, paleta de colores y
+          tipografías
+        </Fragment>
+      </Sectionhead>
+    )
+  }
+
+  <div class='grid grid-cols-1 md:grid-cols-2 gap-10 sm:mx-auto md:mx-40 mt-12'>
+    {pricing.map((item) => <PricingCard plan={item} />)}
+  </div>
+</Container>

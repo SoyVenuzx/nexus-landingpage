@@ -4,6 +4,8 @@ import SectionHead from '@/components/sectionhead.astro';
 import CardGR from './cards/CardGR.astro';
 import CardSM from './cards/CardSM.astro';
 import CardMD from './cards/CardMD.astro';
+import CardOT from './cards/CardOT.astro';
+import CardLO from './cards/CardLO.astro';
 
 const { show = true } = Astro.props;
 ---
@@ -27,6 +29,8 @@ const { show = true } = Astro.props;
         <>
           <CardMD />
           <CardSM />
+          <CardLO />
+          <CardOT />
         </>
       )
     }
